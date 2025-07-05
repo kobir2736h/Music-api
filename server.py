@@ -19,7 +19,7 @@ if not os.path.exists(DOWNLOAD_FOLDER):
 def delete_old_files():
     for file in os.listdir(DOWNLOAD_FOLDER):
         file_path = os.path.join(DOWNLOAD_FOLDER, file)
-        if os.path.isfile(file_path) and time.time() - os.path.getctime(file_path) > 10:
+        if os.path.isfile(file_path) and time.time() - os.path.getctime(file_path) > 20:
             os.remove(file_path)
 
 @app.route('/')
